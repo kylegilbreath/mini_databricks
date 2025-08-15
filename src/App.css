@@ -1,0 +1,122 @@
+.App {
+  min-height: 100vh;
+}
+
+.view-toggle {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 1000;
+  background-color: var(--background-primary);
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border);
+  user-select: none;
+  transition: all 0.2s ease;
+  min-width: 120px;
+}
+
+.view-toggle.minimized {
+  min-width: auto;
+  width: auto;
+  padding: 4px;
+}
+
+.view-toggle:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.toggle-button {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.toggle-button:hover {
+  background-color: var(--background-hover);
+  color: var(--text-primary);
+}
+
+.toggle-button.active {
+  background-color: var(--action-primary-background-default);
+  color: var(--action-primary-text-default);
+  border-color: var(--action-primary-background-default);
+}
+
+.toggle-button.active:hover {
+  background-color: var(--action-primary-background-hover);
+  color: var(--action-primary-text-hover);
+}
+
+.toggle-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.current-view-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.minimize-button {
+  background: none;
+  border: none;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.minimize-button:hover {
+  background-color: var(--action-default-background-hover);
+  color: var(--text-primary);
+}
+
+.minimize-button svg {
+  width: 12px;
+  height: 12px;
+}
+
+.drag-handle {
+  display: flex;
+  justify-content: center;
+  padding: 4px 0;
+  cursor: grab;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.drag-dots {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+
+.drag-dot {
+  width: 3px;
+  height: 3px;
+  background-color: var(--text-secondary);
+  border-radius: 50%;
+  opacity: 0.6;
+} 
